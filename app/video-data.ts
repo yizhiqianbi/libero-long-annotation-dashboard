@@ -180,7 +180,7 @@ export const videoRecords: VideoRecord[] = [
         {
           "action": "Lower the mug into the microwave cavity and open the gripper to release it.",
           "start_sec": 7.5,
-          "end_sec": 9.5
+          "end_sec": 9.2
         },
         {
           "action": "Retract the arm from the microwave and move towards the open door.",
@@ -719,7 +719,7 @@ export const videoRecords: VideoRecord[] = [
         {
           "action": "Retract the arm upwards and away from the caddy.",
           "start_sec": 8.5,
-          "end_sec": 9.5
+          "end_sec": 9.2
         }
       ]
     },
@@ -745,4 +745,3 @@ export const videoRecords: VideoRecord[] = [
     }
   }
 ];
-
