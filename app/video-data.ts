@@ -426,7 +426,7 @@ export const videoRecords: VideoRecord[] = [
         {
           "action": "Lower the green box into the basket and open the gripper to release it.",
           "start_sec": 12.5,
-          "end_sec": 14.0
+          "end_sec": 13.9
         }
       ]
     },
