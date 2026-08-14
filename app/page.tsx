@@ -27,7 +27,7 @@ const models: Record<ModelKey, {
     color: "#f0b45b",
     parse: "100%",
     quality: "10 / 10",
-    qualityLabel: "成功判定准确率",
+    qualityLabel: "成功标签对齐",
     latency: "26.939 s",
     throughput: "134 条 / 小时",
     gpu: "1 × H200",
@@ -109,7 +109,7 @@ export default function Home() {
 
       {tab === "overview" && <>
         <section className="headline-grid">
-          <article className="headline-card accent"><div className="card-kicker">DENSE SEMANTIC READ</div><div className="headline">10<span className="unit">/ 10</span></div><p>Qwen dense prompt 对数据集成功标签的识别结果，并把每条视频拆成约 6–9 个 micro-subgoal。</p><div className="card-foot"><span>QWEN SUCCESS ACCURACY</span><strong>100%</strong></div></article>
+          <article className="headline-card accent"><div className="card-kicker">DENSE SEMANTIC READ</div><div className="headline">10<span className="unit">/ 10</span></div><p>Qwen dense prompt 对数据集成功标签的对齐结果，并把每条视频拆成约 6–9 个 micro-subgoal。</p><div className="card-foot"><span>QWEN SUCCESS ALIGNMENT</span><strong>100%</strong></div></article>
           <article className="headline-card"><div className="card-kicker">SPEED LEAD</div><div className="headline">0.970<span className="unit">s</span></div><p>TimeLens2 单卡平均推理延迟，快于 TimeLens，适合批量动作定位。</p><div className="card-foot"><span>吞吐</span><strong>3,710 / h</strong></div></article>
           <article className="headline-card"><div className="card-kicker">RECOMMENDED STACK</div><div className="stack-line"><span className="stack-num">01</span><strong>Qwen</strong><span>语义判断</span></div><div className="stack-line"><span className="stack-num">02</span><strong>TimeLens2</strong><span>边界精修</span></div><div className="stack-line"><span className="stack-num">03</span><strong>Human</strong><span>冲突复核</span></div></article>
         </section>
