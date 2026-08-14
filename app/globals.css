@@ -23,6 +23,8 @@ button { color: inherit; font: inherit; cursor: pointer; }
 .model-result-head { display: flex; align-items: center; gap: 7px; color: #dce2d8; font: 11px ui-monospace, monospace; }
 .model-result-head i { width: 7px; height: 7px; border-radius: 50%; }
 .model-result-head span { margin-left: auto; color: #7e897e; font-size: 9px; }
+.model-result-label { margin-top: 15px; color: var(--lime); font: 9px ui-monospace, monospace; letter-spacing: .12em; }
+.model-result-caption { min-height: 82px; margin: 8px 0 0; color: #cbd3c8; font-size: 12px; line-height: 1.55; }
 .model-result-value { min-height: 35px; margin-top: 15px; color: #e7eadf; font: 16px Georgia, serif; line-height: 1.35; }
 .model-result-meta { margin-top: 13px; color: #768277; font: 10px ui-monospace, monospace; }
 .interval-track { position: relative; height: 5px; margin-top: 10px; background: #29302d; }
