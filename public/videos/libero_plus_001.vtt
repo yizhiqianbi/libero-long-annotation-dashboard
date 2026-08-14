@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.334
+The robot arm moves from the top center to the left, grasps the blue can on the floor, and lifts it. It then moves the can to the left and places it into the white basket.
+
+2
+00:00:00.000 --> 00:00:04.000
+Move arm to the left and lower the gripper to grasp the blue can.
+
+3
+00:00:04.000 --> 00:00:06.000
+Lift the can and move it left towards the basket.
+
+4
+00:00:06.000 --> 00:00:08.000
+Lower the can into the basket and release the gripper.

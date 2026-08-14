@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.334
+The robot arm moves from the left towards the red can on the right side of the table. It approaches the can from above, closes its gripper to grasp it, and then holds the can in a suspended position without placing it in the basket.
+
+2
+00:00:00.000 --> 00:00:03.000
+Move arm towards the red can and position gripper above it
+
+3
+00:00:03.000 --> 00:00:04.500
+Close gripper to grasp the red can
+
+4
+00:00:04.500 --> 00:00:09.200
+Hold the red can in a stationary position

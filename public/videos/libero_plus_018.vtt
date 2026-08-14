@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:17.334
+The robot arm approaches the black bowl on the table from above, grasps it, and lifts it. It then moves the bowl to the left, positions it over the open bottom drawer of the cabinet, and releases it inside. Finally, the arm retracts upwards and to the right.
+
+2
+00:00:00.000 --> 00:00:02.400
+Move arm down and forward to approach the black bowl from above
+
+3
+00:00:02.400 --> 00:00:03.500
+Grasp the black bowl with the gripper
+
+4
+00:00:03.500 --> 00:00:06.500
+Lift the bowl and move it to the left towards the open cabinet drawer
+
+5
+00:00:06.500 --> 00:00:10.000
+Lower the bowl into the bottom drawer and release it
+
+6
+00:00:10.000 --> 00:00:16.700
+Retract the arm upwards and to the right away from the drawer

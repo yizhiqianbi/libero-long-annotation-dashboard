@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:17.334
+The robot arm moves down to grasp the right moka pot by its handle, lifts it, and places it onto the front-left burner of the stove. The arm then retracts, leaving the left moka pot on the table.
+
+2
+00:00:00.000 --> 00:00:05.000
+Move arm down and forward to approach the right moka pot, then close the gripper to grasp the handle.
+
+3
+00:00:05.000 --> 00:00:10.000
+Lift the grasped moka pot and move it to the right, positioning it over the front-left burner of the stove.
+
+4
+00:00:10.000 --> 00:00:17.000
+Lower the moka pot onto the stove burner, open the gripper to release it, and retract the arm upwards.

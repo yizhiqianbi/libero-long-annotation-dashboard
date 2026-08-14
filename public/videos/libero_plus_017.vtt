@@ -1,0 +1,13 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:17.334
+The robot arm sequentially picks up two moka pots from the table and places them onto the stove. The first pot is placed on the right side of the stove, and the second pot is placed on the left side, next to the first one.
+
+2
+00:00:00.000 --> 00:00:07.500
+Move arm down to grasp the right moka pot by its handle, lift it, and place it on the right side of the stove.
+
+3
+00:00:07.500 --> 00:00:17.000
+Move arm to the left moka pot, grasp it by its handle, lift it, and place it on the left side of the stove next to the first pot.

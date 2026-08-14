@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:17.334
+The robot arm approaches the yellow and white mug on the table, grasps it, lifts it, and moves it into the microwave. The arm then retracts, leaving the mug inside the open microwave.
+
+2
+00:00:00.000 --> 00:00:05.000
+move arm towards mug and grasp
+
+3
+00:00:05.000 --> 00:00:12.000
+lift mug and move into microwave
+
+4
+00:00:12.000 --> 00:00:17.000
+release mug and retract arm

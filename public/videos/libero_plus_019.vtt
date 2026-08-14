@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.334
+The robot arm moves from the right side of the workspace towards the left, approaching the yellow box (butter) from above. It hovers briefly over the object before retracting back to the right side without making contact or grasping the item.
+
+2
+00:00:00.000 --> 00:00:04.000
+Move arm from right side towards the yellow box on the left
+
+3
+00:00:04.000 --> 00:00:05.000
+Hover over the yellow box
+
+4
+00:00:05.000 --> 00:00:09.000
+Retract arm back to the right side

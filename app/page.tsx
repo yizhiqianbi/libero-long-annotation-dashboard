@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
+import { videoRecords } from "./video-data";
 
 type ModelKey = "qwen" | "timelens2" | "timelens";
 
@@ -108,6 +109,7 @@ const examples = [
 const tabs = [
   ["overview", "总览"],
   ["quality", "质量对比"],
+  ["videos", "视频 + caption"],
   ["samples", "样本拆解"],
   ["resources", "单卡资源"],
 ] as const;
@@ -116,22 +118,23 @@ export default function Home() {
   const [tab, setTab] = useState<(typeof tabs)[number][0]>("overview");
   const [selectedModel, setSelectedModel] = useState<ModelKey>("qwen");
   const [sampleIndex, setSampleIndex] = useState(0);
+  const [videoIndex, setVideoIndex] = useState(0);
   const active = models[selectedModel];
   const sample = examples[sampleIndex];
-  const bestSpeed = useMemo(() => Math.round(30.57 / 0.683), []);
+  const video = videoRecords[videoIndex];
 
   return (
     <main className="app-shell">
       <header className="topbar">
         <div className="brand"><span className="brand-mark">L</span><span>LIBERO / EVAL LAB</span></div>
-        <div className="run-status"><span className="status-dot" /> RUN COMPLETE <span className="status-date">· 24 shared tasks · 1 GPU pass</span></div>
+        <div className="run-status"><span className="status-dot" /> RUN COMPLETE <span className="status-date">· 28 videos · 1 GPU pass</span></div>
       </header>
 
       <section className="hero">
         <div className="eyebrow">ANNOTATION BENCHMARK <span>／</span> 2026.08.15</div>
         <h1>同一批任务，<em>三种视角。</em></h1>
         <p className="hero-copy">LIBERO Long 24 条共同任务的单卡推理复盘。Qwen 负责理解“有没有完成”，TimeLens 系列负责回答“动作发生在哪里”。</p>
-        <div className="hero-meta"><span>DATASET <strong>LIBERO-plus / case study</strong></span><span>VIDEOS <strong>24</strong></span><span>LABEL <strong>all failed rollouts</strong></span></div>
+        <div className="hero-meta"><span>DATASET <strong>LIBERO-plus / case study</strong></span><span>VIDEOS <strong>28</strong></span><span>CAPTION <strong>Qwen observed_summary + segments</strong></span></div>
       </section>
 
       <nav className="tabs" aria-label="评测视图">
@@ -154,11 +157,13 @@ export default function Home() {
 
       {tab === "quality" && <section className="section-block view-block"><div className="section-heading"><div><div className="eyebrow">QUALITY / 24 SHARED TASKS</div><h2>能力拆分比单一排名更诚实</h2></div><span className="muted">INFERENCE-ONLY METRICS</span></div><div className="comparison-table"><div className="table-row table-head"><span>MODEL</span><span>ROLE</span><span>PARSE</span><span>SUCCESS READ</span><span>LATENCY</span></div>{(Object.keys(models) as ModelKey[]).map(key => <div className="table-row" key={key}><span className="table-model"><i style={{ background: models[key].color }} />{models[key].name}</span><span>{models[key].role}</span><span>{models[key].parse}</span><span className={key === "qwen" ? "good" : "warn"}>{key === "qwen" ? "4 / 24 failures" : "not applicable"}</span><span className="mono">{models[key].latency}</span></div>)}</div><div className="quality-notes"><article><span className="note-num">A</span><h3>Qwen / semantic</h3><p>输出平均 3.58 个动作段。能解释“只做了一件”的长任务失败，但在视觉上接近完成的失败回放上偏乐观。</p></article><article><span className="note-num">B</span><h3>TimeLens2 / temporal</h3><p>速度更快、边界合法率稳定。它需要一个明确的动作查询，不应被要求从视频中自主推导 success。</p></article><article><span className="note-num">C</span><h3>Gold set / next</h3><p>下一轮需要补成功样本和人工动作边界，才能计算 F1、失败原因准确率与 temporal mIoU。</p></article></div></section>}
 
+      {tab === "videos" && <section className="section-block view-block video-view"><div className="section-heading"><div><div className="eyebrow">VIDEO + CAPTION / 28 RECORDS</div><h2>逐条回放每个视频与对应 caption</h2></div><span className="muted">QWEN3.8-27B-FP8 · SINGLE CARD</span></div><div className="video-layout"><div className="video-list" aria-label="视频列表">{videoRecords.map((item, index) => <button key={item.id} className={videoIndex === index ? "video-item selected" : "video-item"} onClick={() => setVideoIndex(index)}><span className="video-item-top"><span className="sample-id">{item.id}</span><span className={item.success ? "video-status success" : "video-status failure"}>{item.success ? "完成" : "失败"}</span></span><span className="video-item-task">{item.task}</span><span className="video-item-meta">{item.scenario} · {item.duration.toFixed(1)}s{item.eligible ? "" : " · language variant"}</span></button>)}</div><article className="video-stage"><video className="video-player" controls preload="metadata" src={video.src} aria-label={`${video.id} video`}><track kind="captions" src={video.src.replace(".mp4", ".vtt")} srcLang="en" label="Qwen caption" default /></video><div className="video-caption"><div className="detail-top"><span className="sample-id">{video.id} · {video.scenario}</span><span className={video.success ? "video-status success" : "video-status failure"}>{video.success ? "Qwen 判断完成" : "Qwen 判断失败"}</span></div><h3>{video.task}</h3><div className="caption-label">OBSERVED CAPTION · QWEN</div><p className="caption-text">{video.caption}</p>{video.reason && <p className="caption-reason"><strong>失败原因：</strong>{video.reason}</p>}<div className="caption-meta"><span>VIDEO DURATION <strong>{video.duration.toFixed(1)} s</strong></span><span>{video.eligible ? "SHARED EVAL" : "LANGUAGE VARIANT · NOT IN TIMELENS METRICS"}</span></div><div className="caption-label">ATOMIC SEGMENTS</div><div className="caption-segments">{video.segments.map((segment, index) => <div className="caption-segment" key={`${video.id}-${index}`}><span className="segment-time">{segment.start_sec.toFixed(1)}–{segment.end_sec.toFixed(1)}s</span><span>{segment.action}</span></div>)}</div></div></article></div></section>}
+
       {tab === "samples" && <section className="section-block view-block"><div className="section-heading"><div><div className="eyebrow">SAMPLE EXPLORER</div><h2>从原始视频到可审核标签</h2></div><span className="muted">SELECT A CASE</span></div><div className="sample-layout"><div className="sample-list">{examples.map((item, index) => <button key={item.id} className={sampleIndex === index ? "sample-item selected" : "sample-item"} onClick={() => setSampleIndex(index)}><span className="sample-id">{item.id}</span><span>{item.task}</span><b className={item.verdictClass}>{item.verdict}</b></button>)}</div><article className="sample-detail"><div className="detail-top"><span className="sample-id">{sample.id}</span><span className={sample.verdictClass}>{sample.verdict}</span></div><h3>{sample.task}</h3><div className="detail-meta"><span>OUTPUT BY</span><strong>{sample.model}</strong></div><p className="reason">{sample.reason}</p><div className="timeline-label">ATOMIC SEGMENTS</div><div className="segments">{sample.segments.map((segment) => <div className="segment" key={segment}><span className="segment-dot" />{segment}</div>)}</div></article></div></section>}
 
       {tab === "resources" && <section className="section-block view-block"><div className="section-heading"><div><div className="eyebrow">DEPLOYMENT / SINGLE GPU</div><h2>速度来自任务边界，也来自运行方式</h2></div><span className="muted">H200 REFERENCE</span></div><div className="resource-grid">{(Object.keys(models) as ModelKey[]).map(key => <article className="resource-card" key={key}><div className="resource-head"><i style={{ background: models[key].color }} /><strong>{models[key].short}</strong><span>{models[key].gpu}</span></div><div className="resource-number">{models[key].latency}<small> / video</small></div><div className="resource-line"><span>权重目录</span><b>{models[key].memory}</b></div><div className="resource-line"><span>吞吐</span><b>{models[key].throughput}</b></div><div className="resource-line"><span>运行方式</span><b>{key === "qwen" ? "single-card BF16" : "single-card native"}</b></div></article>)}</div><div className="resource-callout"><span>⚠</span><p><strong>Qwen 单卡说明：</strong>原始 checkpoint 是 FP8；当前 Torch 2.5 / Triton 环境无法加载新版 FP8 kernel，因此本次单卡使用 Transformers 的 BF16 解量化路径。单张 H200（约 144 GB）可容纳约 54 GB 解量化权重；速度代表 BF16 fallback，不代表原生 FP8 kernel。</p></div></section>}
 
-      <footer><span>LIBERO / EVAL LAB</span><span>24 shared tasks · three model passes · human review recommended</span><span>REPORT v1.0</span></footer>
+      <footer><span>LIBERO / EVAL LAB</span><span>28 videos · three model passes · human review recommended</span><span>REPORT v1.0</span></footer>
     </main>
   );
 }

@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.334
+The robot arm approaches the blue rectangular object (salad dressing) on the table from above, grasps it, lifts it, and moves it to the left to place it into the woven basket.
+
+2
+00:00:00.000 --> 00:00:02.500
+Move arm down and right to approach the blue object on the table from above.
+
+3
+00:00:02.500 --> 00:00:03.500
+Close gripper to grasp the blue object.
+
+4
+00:00:03.500 --> 00:00:06.000
+Lift the object and move it left towards the basket.
+
+5
+00:00:06.000 --> 00:00:08.500
+Lower the object into the basket and open the gripper to release it.
+
+6
+00:00:08.500 --> 00:00:09.500
+Retract arm upwards and away from the basket.

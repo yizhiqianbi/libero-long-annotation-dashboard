@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:07.334
+The robot arm moves from the top center to the left, grasps the black bowl located between the plate and the other bowl, lifts it, and places it onto the plate.
+
+2
+00:00:00.000 --> 00:00:03.500
+Move arm towards the black bowl and grasp it
+
+3
+00:00:03.500 --> 00:00:05.500
+Lift the bowl and move it to the left over the plate
+
+4
+00:00:05.500 --> 00:00:07.000
+Lower the bowl onto the plate and release the gripper

@@ -1,0 +1,17 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:17.334
+The robot arm sequentially picks up a blue cup and a green can from the table and places them into the white basket on the left. After placing the second object, the arm retracts and hovers above the table.
+
+2
+00:00:00.000 --> 00:00:07.000
+Move to the blue cup, grasp it, and place it into the white basket.
+
+3
+00:00:07.000 --> 00:00:12.000
+Move to the green can, grasp it, and place it into the white basket.
+
+4
+00:00:12.000 --> 00:00:17.000
+Retract the arm and hover above the table.

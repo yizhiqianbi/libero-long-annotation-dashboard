@@ -1,0 +1,21 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.334
+The robot arm moves from the top center to the right, grasps the blue can (alphabet soup) from above, lifts it, and places it into the basket on the left side of the table.
+
+2
+00:00:00.000 --> 00:00:02.500
+Move arm to the right and descend to grasp the blue can from above.
+
+3
+00:00:02.500 --> 00:00:04.000
+Lift the blue can and move it to the left towards the basket.
+
+4
+00:00:04.000 --> 00:00:05.500
+Lower the can into the basket and open the gripper to release it.
+
+5
+00:00:05.500 --> 00:00:09.000
+Retract the arm upwards and to the right, away from the basket.
