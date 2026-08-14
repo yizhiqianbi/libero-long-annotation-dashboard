@@ -1,14 +1,30 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:04.000
-Grasp the white mug and lift it off the table
+00:00:00.000 --> 00:00:02.000
+Move the open gripper towards the white mug on the left and align above it.
 
 2
-00:00:04.000 --> 00:00:07.000
-Move the mug over the plate and release it to place it on the plate
+00:00:02.000 --> 00:00:03.500
+Descend and close the gripper to grasp the white mug.
 
 3
-00:00:07.000 --> 00:00:10.000
-Retract the arm upwards and away from the workspace
+00:00:03.500 --> 00:00:05.000
+Lift the white mug and transport it towards the plate.
+
+4
+00:00:05.000 --> 00:00:06.500
+Align the mug over the plate and lower it.
+
+5
+00:00:06.500 --> 00:00:08.000
+Release the mug onto the plate and retract the arm upwards.
+
+6
+00:00:08.000 --> 00:00:09.000
+Move the arm towards the brown box on the right and align above it.
+
+7
+00:00:09.000 --> 00:00:10.000
+Descend and close the gripper to grasp the brown box.
 

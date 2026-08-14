@@ -1,14 +1,30 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:04.000
-Grasp the yellow and white mug
+00:00:00.000 --> 00:00:02.500
+Move the robotic arm from the bottom center towards the yellow and white mug on the counter.
 
 2
-00:00:04.000 --> 00:00:09.000
-Lift and move the mug into the microwave
+00:00:02.500 --> 00:00:03.500
+Align the open gripper directly above the yellow and white mug.
 
 3
-00:00:09.000 --> 00:00:14.000
-Retract arm and close the microwave door
+00:00:03.500 --> 00:00:05.000
+Descend and close the gripper to grasp the mug by its handle.
+
+4
+00:00:05.000 --> 00:00:07.500
+Lift the mug and transport it to the right towards the open microwave.
+
+5
+00:00:07.500 --> 00:00:09.500
+Lower the mug into the microwave cavity and open the gripper to release it.
+
+6
+00:00:09.500 --> 00:00:11.500
+Retract the arm from the microwave and move towards the open door.
+
+7
+00:00:11.500 --> 00:00:14.500
+Push the microwave door closed with the arm.
 

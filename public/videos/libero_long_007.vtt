@@ -1,18 +1,30 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:05.000
-grasp white mug
+00:00:00.000 --> 00:00:02.500
+Left arm approaches the white mug from the left and closes its gripper to grasp the handle.
 
 2
-00:00:05.000 --> 00:00:09.000
-move white mug to left plate
+00:00:02.500 --> 00:00:05.000
+Left arm lifts the white mug and transports it to the left side of the table.
 
 3
-00:00:09.000 --> 00:00:11.000
-grasp yellow and white mug
+00:00:05.000 --> 00:00:07.000
+Left arm lowers the white mug onto the left plate and opens the gripper to release it.
 
 4
-00:00:11.000 --> 00:00:13.300
-move yellow and white mug to right plate
+00:00:07.000 --> 00:00:09.000
+Left arm retracts away from the plate while the right arm moves into position to approach the yellow and white mug.
+
+5
+00:00:09.000 --> 00:00:10.500
+Right arm closes its gripper to grasp the handle of the yellow and white mug.
+
+6
+00:00:10.500 --> 00:00:12.000
+Right arm lifts the yellow and white mug and transports it to the right side of the table.
+
+7
+00:00:12.000 --> 00:00:13.000
+Right arm lowers the yellow and white mug onto the right plate and opens the gripper to release it.
 

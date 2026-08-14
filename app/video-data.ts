@@ -13,19 +13,44 @@ export const videoRecords: VideoRecord[] = [
     "src": "/videos/libero_long_000.mp4",
     "episodeId": "demo_49",
     "qwen": {
-      "success": false,
-      "caption": "The robot arm moves to the right to press the stove knob, turning on the burner, and then moves to the left to grasp the moka pot.",
-      "reason": "The robot only grasps the moka pot but does not place it on the stove before the video ends.",
-      "latency": 12.778,
+      "success": true,
+      "caption": "A robotic arm in a kitchen simulation first moves to the stove control knob, grasps it, and rotates it to turn on the burner (indicated by a red glow). The arm then retracts, moves to the moka pot on the counter, grasps it, lifts it, and places it onto the active burner.",
+      "reason": null,
+      "latency": 28.841,
       "segments": [
         {
-          "action": "Robot arm moves right and presses the stove knob to turn on the burner",
+          "action": "Move the robotic arm from the bottom center towards the stove knob on the right.",
           "start_sec": 0.0,
+          "end_sec": 2.0
+        },
+        {
+          "action": "Descend and close the gripper to grasp the stove knob.",
+          "start_sec": 2.0,
+          "end_sec": 3.5
+        },
+        {
+          "action": "Rotate the knob to the right to turn on the stove, causing the burner to glow red.",
+          "start_sec": 3.5,
           "end_sec": 6.0
         },
         {
-          "action": "Robot arm moves left and grasps the moka pot",
+          "action": "Open the gripper to release the knob and retract the arm to the left.",
           "start_sec": 6.0,
+          "end_sec": 8.0
+        },
+        {
+          "action": "Move the arm to the moka pot and close the gripper to grasp its handle.",
+          "start_sec": 8.0,
+          "end_sec": 10.0
+        },
+        {
+          "action": "Lift the moka pot and transport it to the right, aligning it above the stove burner.",
+          "start_sec": 10.0,
+          "end_sec": 12.0
+        },
+        {
+          "action": "Lower the moka pot onto the burner and open the gripper to release it.",
+          "start_sec": 12.0,
           "end_sec": 13.5
         }
       ]
@@ -61,29 +86,39 @@ export const videoRecords: VideoRecord[] = [
     "episodeId": "demo_49",
     "qwen": {
       "success": true,
-      "caption": "The robot arm approaches a silver clock on the table, grasps it, and places it into an open drawer on the right. The arm then pushes the drawer closed.",
+      "caption": "A robotic arm grasps a black bowl from a wooden table, transports it to an open cabinet drawer, places the bowl inside, and retracts.",
       "reason": null,
-      "latency": 15.423,
+      "latency": 21.223,
       "segments": [
         {
-          "action": "Move arm towards the clock and grasp it",
+          "action": "Move the robotic arm from the bottom center towards the black bowl on the table to the left.",
           "start_sec": 0.0,
+          "end_sec": 2.0
+        },
+        {
+          "action": "Descend and close the gripper to grasp the black bowl.",
+          "start_sec": 2.0,
           "end_sec": 4.0
         },
         {
-          "action": "Lift the clock and move it to the open drawer",
+          "action": "Lift the black bowl and transport it to the right towards the open cabinet.",
           "start_sec": 4.0,
           "end_sec": 7.0
         },
         {
-          "action": "Place the clock inside the drawer and release it",
+          "action": "Lower the black bowl into the open cabinet drawer.",
           "start_sec": 7.0,
+          "end_sec": 9.0
+        },
+        {
+          "action": "Open the gripper to release the black bowl inside the drawer.",
+          "start_sec": 9.0,
           "end_sec": 10.0
         },
         {
-          "action": "Push the drawer closed",
+          "action": "Retract the robotic arm upwards and away from the cabinet.",
           "start_sec": 10.0,
-          "end_sec": 12.6
+          "end_sec": 12.5
         }
       ]
     },
@@ -118,24 +153,44 @@ export const videoRecords: VideoRecord[] = [
     "episodeId": "demo_49",
     "qwen": {
       "success": true,
-      "caption": "The robot arm grasps the yellow and white mug from the table, lifts it, and places it inside the open microwave. The arm then retracts and pushes the microwave door shut.",
+      "caption": "A white robotic arm in a kitchen simulation reaches for a yellow and white mug on a wooden countertop, grasps it, transports it into an open black microwave, releases it, and closes the microwave door.",
       "reason": null,
-      "latency": 12.88,
+      "latency": 25.316,
       "segments": [
         {
-          "action": "Grasp the yellow and white mug",
+          "action": "Move the robotic arm from the bottom center towards the yellow and white mug on the counter.",
           "start_sec": 0.0,
-          "end_sec": 4.0
+          "end_sec": 2.5
         },
         {
-          "action": "Lift and move the mug into the microwave",
-          "start_sec": 4.0,
-          "end_sec": 9.0
+          "action": "Align the open gripper directly above the yellow and white mug.",
+          "start_sec": 2.5,
+          "end_sec": 3.5
         },
         {
-          "action": "Retract arm and close the microwave door",
-          "start_sec": 9.0,
-          "end_sec": 14.0
+          "action": "Descend and close the gripper to grasp the mug by its handle.",
+          "start_sec": 3.5,
+          "end_sec": 5.0
+        },
+        {
+          "action": "Lift the mug and transport it to the right towards the open microwave.",
+          "start_sec": 5.0,
+          "end_sec": 7.5
+        },
+        {
+          "action": "Lower the mug into the microwave cavity and open the gripper to release it.",
+          "start_sec": 7.5,
+          "end_sec": 9.5
+        },
+        {
+          "action": "Retract the arm from the microwave and move towards the open door.",
+          "start_sec": 9.5,
+          "end_sec": 11.5
+        },
+        {
+          "action": "Push the microwave door closed with the arm.",
+          "start_sec": 11.5,
+          "end_sec": 14.5
         }
       ]
     },
@@ -170,29 +225,54 @@ export const videoRecords: VideoRecord[] = [
     "episodeId": "demo_49",
     "qwen": {
       "success": true,
-      "caption": "The robot arm moves upward to grasp the left wall-mounted spotlight, rotates it to face downwards, and releases it. The arm then moves to the right to grasp the second spotlight, rotates it to face downwards, and releases it.",
+      "caption": "A dual-arm robot in a kitchen scene uses its left arm to grasp a silver moka pot from the counter and place it on the left burner of the stove. The right arm then grasps a second moka pot from the counter and places it on the right burner.",
       "reason": null,
-      "latency": 17.263,
+      "latency": 32.968,
       "segments": [
         {
-          "action": "Move arm up and left to approach the left spotlight, then grasp it.",
+          "action": "Left arm moves upward and forward to approach the first moka pot on the counter.",
           "start_sec": 0.0,
-          "end_sec": 4.0
+          "end_sec": 2.0
         },
         {
-          "action": "Rotate the left spotlight to point downwards and release the grip.",
-          "start_sec": 4.0,
-          "end_sec": 9.0
+          "action": "Left arm descends and closes its gripper to grasp the first moka pot.",
+          "start_sec": 2.0,
+          "end_sec": 3.5
         },
         {
-          "action": "Move arm to the right to approach the right spotlight, then grasp it.",
-          "start_sec": 9.0,
-          "end_sec": 13.0
+          "action": "Left arm lifts the first moka pot and transports it to the left side of the stove.",
+          "start_sec": 3.5,
+          "end_sec": 5.5
         },
         {
-          "action": "Rotate the right spotlight to point downwards and release the grip.",
-          "start_sec": 13.0,
-          "end_sec": 17.0
+          "action": "Left arm lowers the first moka pot onto the left burner and releases it.",
+          "start_sec": 5.5,
+          "end_sec": 7.5
+        },
+        {
+          "action": "Left arm retracts, and the right arm moves forward to approach the second moka pot.",
+          "start_sec": 7.5,
+          "end_sec": 9.5
+        },
+        {
+          "action": "Right arm descends and closes its gripper to grasp the second moka pot.",
+          "start_sec": 9.5,
+          "end_sec": 11.0
+        },
+        {
+          "action": "Right arm lifts the second moka pot and transports it to the right side of the stove.",
+          "start_sec": 11.0,
+          "end_sec": 13.5
+        },
+        {
+          "action": "Right arm lowers the second moka pot onto the right burner and releases it.",
+          "start_sec": 13.5,
+          "end_sec": 15.5
+        },
+        {
+          "action": "Right arm retracts upward and away from the stove.",
+          "start_sec": 15.5,
+          "end_sec": 17.5
         }
       ]
     },
@@ -227,29 +307,49 @@ export const videoRecords: VideoRecord[] = [
     "episodeId": "demo_49",
     "qwen": {
       "success": true,
-      "caption": "The robot arm grasps the blue can (alphabet soup) from the table and places it into the basket on the right. The arm then returns to the center, grasps the small blue box (cream cheese), and places it into the basket next to the can.",
+      "caption": "A robotic arm sequentially grasps a blue can and a small blue box from a wooden table and places them into a white basket on the right.",
       "reason": null,
-      "latency": 17.893,
+      "latency": 27.509,
       "segments": [
         {
-          "action": "Grasp the blue can on the table",
+          "action": "Move the open gripper from the bottom center towards the blue can on the left.",
           "start_sec": 0.0,
+          "end_sec": 1.5
+        },
+        {
+          "action": "Descend and close the gripper to grasp the blue can.",
+          "start_sec": 1.5,
           "end_sec": 3.0
         },
         {
-          "action": "Move the blue can to the right and place it into the basket",
+          "action": "Lift the blue can and transport it to the right towards the basket.",
           "start_sec": 3.0,
-          "end_sec": 8.0
+          "end_sec": 5.0
         },
         {
-          "action": "Return to the center and grasp the small blue box",
-          "start_sec": 8.0,
-          "end_sec": 11.0
+          "action": "Lower the blue can into the basket and open the gripper to release it.",
+          "start_sec": 5.0,
+          "end_sec": 7.0
         },
         {
-          "action": "Move the blue box to the right and place it into the basket",
-          "start_sec": 11.0,
-          "end_sec": 14.0
+          "action": "Retract the arm and move towards the small blue box in the center.",
+          "start_sec": 7.0,
+          "end_sec": 9.0
+        },
+        {
+          "action": "Descend and close the gripper to grasp the small blue box.",
+          "start_sec": 9.0,
+          "end_sec": 10.5
+        },
+        {
+          "action": "Lift the blue box and transport it to the right towards the basket.",
+          "start_sec": 10.5,
+          "end_sec": 12.5
+        },
+        {
+          "action": "Lower the blue box into the basket and open the gripper to release it.",
+          "start_sec": 12.5,
+          "end_sec": 14.5
         }
       ]
     },
@@ -284,28 +384,48 @@ export const videoRecords: VideoRecord[] = [
     "episodeId": "demo_49",
     "qwen": {
       "success": true,
-      "caption": "The robot arm sequentially picks up the alphabet soup can and the tomato sauce can from the table and places them into the basket on the right.",
+      "caption": "A robotic arm in a living room scene sequentially picks up a blue box (alphabet soup) and a green box (tomato sauce) from a wooden table and places them into a white basket on the right.",
       "reason": null,
-      "latency": 16.553,
+      "latency": 28.258,
       "segments": [
         {
-          "action": "Move to the alphabet soup can, grasp it, and lift it off the table.",
+          "action": "Move the arm from the bottom center toward the blue box on the left side of the table.",
           "start_sec": 0.0,
-          "end_sec": 5.0
+          "end_sec": 1.5
         },
         {
-          "action": "Move the alphabet soup can to the basket and release it inside.",
-          "start_sec": 5.0,
-          "end_sec": 8.0
+          "action": "Descend and close the gripper to grasp the blue box.",
+          "start_sec": 1.5,
+          "end_sec": 3.0
         },
         {
-          "action": "Move to the tomato sauce can, grasp it, and lift it off the table.",
-          "start_sec": 8.0,
-          "end_sec": 11.0
+          "action": "Lift the blue box and transport it to the right toward the basket.",
+          "start_sec": 3.0,
+          "end_sec": 5.5
         },
         {
-          "action": "Move the tomato sauce can to the basket and release it inside.",
-          "start_sec": 11.0,
+          "action": "Lower the blue box into the basket and open the gripper to release it.",
+          "start_sec": 5.5,
+          "end_sec": 7.5
+        },
+        {
+          "action": "Retract the arm and move left to approach the green box.",
+          "start_sec": 7.5,
+          "end_sec": 9.0
+        },
+        {
+          "action": "Descend and close the gripper to grasp the green box.",
+          "start_sec": 9.0,
+          "end_sec": 10.5
+        },
+        {
+          "action": "Lift the green box and transport it to the right toward the basket.",
+          "start_sec": 10.5,
+          "end_sec": 12.5
+        },
+        {
+          "action": "Lower the green box into the basket and open the gripper to release it.",
+          "start_sec": 12.5,
           "end_sec": 14.0
         }
       ]
@@ -341,18 +461,48 @@ export const videoRecords: VideoRecord[] = [
     "episodeId": "demo_49",
     "qwen": {
       "success": true,
-      "caption": "The robot arm first grasps the blue box on the left side of the table and moves it to the basket on the right. Next, the arm grasps the orange box located in the center of the table and moves it to the basket, placing it inside.",
+      "caption": "A robotic arm in a living room scene sequentially picks up a blue box (cream cheese) and an orange box (butter) from a wooden table and places them into a wicker basket on the right.",
       "reason": null,
-      "latency": 12.257,
+      "latency": 28.185,
       "segments": [
         {
-          "action": "Grasp the blue box on the left and move it to the basket on the right",
+          "action": "Move the arm from the bottom center toward the blue box on the left side of the table.",
           "start_sec": 0.0,
-          "end_sec": 5.0
+          "end_sec": 1.5
         },
         {
-          "action": "Grasp the orange box in the center and move it to the basket",
-          "start_sec": 5.0,
+          "action": "Descend and close the gripper to grasp the blue box.",
+          "start_sec": 1.5,
+          "end_sec": 3.0
+        },
+        {
+          "action": "Lift the blue box and transport it to the right toward the basket.",
+          "start_sec": 3.0,
+          "end_sec": 5.5
+        },
+        {
+          "action": "Lower the blue box into the basket and open the gripper to release it.",
+          "start_sec": 5.5,
+          "end_sec": 7.0
+        },
+        {
+          "action": "Retract the arm and move left to approach the orange box.",
+          "start_sec": 7.0,
+          "end_sec": 8.5
+        },
+        {
+          "action": "Descend and close the gripper to grasp the orange box.",
+          "start_sec": 8.5,
+          "end_sec": 10.0
+        },
+        {
+          "action": "Lift the orange box and transport it to the right toward the basket.",
+          "start_sec": 10.0,
+          "end_sec": 11.5
+        },
+        {
+          "action": "Lower the orange box into the basket and open the gripper to release it.",
+          "start_sec": 11.5,
           "end_sec": 12.5
         }
       ]
@@ -388,29 +538,44 @@ export const videoRecords: VideoRecord[] = [
     "episodeId": "demo_49",
     "qwen": {
       "success": true,
-      "caption": "The robot arm first grasps the white mug on the left and moves it to the left plate. It then grasps the yellow and white mug on the right and moves it to the right plate.",
+      "caption": "A dual-arm robot manipulates two mugs on a wooden table. The left arm grasps a white mug and moves it to the left plate. The right arm then grasps a yellow and white mug and moves it to the right plate.",
       "reason": null,
-      "latency": 14.959,
+      "latency": 27.941,
       "segments": [
         {
-          "action": "grasp white mug",
+          "action": "Left arm approaches the white mug from the left and closes its gripper to grasp the handle.",
           "start_sec": 0.0,
+          "end_sec": 2.5
+        },
+        {
+          "action": "Left arm lifts the white mug and transports it to the left side of the table.",
+          "start_sec": 2.5,
           "end_sec": 5.0
         },
         {
-          "action": "move white mug to left plate",
+          "action": "Left arm lowers the white mug onto the left plate and opens the gripper to release it.",
           "start_sec": 5.0,
+          "end_sec": 7.0
+        },
+        {
+          "action": "Left arm retracts away from the plate while the right arm moves into position to approach the yellow and white mug.",
+          "start_sec": 7.0,
           "end_sec": 9.0
         },
         {
-          "action": "grasp yellow and white mug",
+          "action": "Right arm closes its gripper to grasp the handle of the yellow and white mug.",
           "start_sec": 9.0,
-          "end_sec": 11.0
+          "end_sec": 10.5
         },
         {
-          "action": "move yellow and white mug to right plate",
-          "start_sec": 11.0,
-          "end_sec": 13.3
+          "action": "Right arm lifts the yellow and white mug and transports it to the right side of the table.",
+          "start_sec": 10.5,
+          "end_sec": 12.0
+        },
+        {
+          "action": "Right arm lowers the yellow and white mug onto the right plate and opens the gripper to release it.",
+          "start_sec": 12.0,
+          "end_sec": 13.0
         }
       ]
     },
@@ -444,24 +609,44 @@ export const videoRecords: VideoRecord[] = [
     "src": "/videos/libero_long_008.mp4",
     "episodeId": "demo_49",
     "qwen": {
-      "success": false,
-      "caption": "The robot arm grasps the white mug, lifts it, and places it onto the plate. The arm then retracts, leaving the mug on the plate and the chocolate pudding in its original position.",
-      "reason": "The robot failed to move the chocolate pudding to the right of the plate.",
-      "latency": 14.647,
+      "success": true,
+      "caption": "A robotic arm grasps a white mug from the left, lifts it, and places it onto a plate. The arm then retracts and moves to grasp a small brown box (chocolate pudding) from the right, lifting it slightly.",
+      "reason": null,
+      "latency": 24.85,
       "segments": [
         {
-          "action": "Grasp the white mug and lift it off the table",
+          "action": "Move the open gripper towards the white mug on the left and align above it.",
           "start_sec": 0.0,
-          "end_sec": 4.0
+          "end_sec": 2.0
         },
         {
-          "action": "Move the mug over the plate and release it to place it on the plate",
-          "start_sec": 4.0,
-          "end_sec": 7.0
+          "action": "Descend and close the gripper to grasp the white mug.",
+          "start_sec": 2.0,
+          "end_sec": 3.5
         },
         {
-          "action": "Retract the arm upwards and away from the workspace",
-          "start_sec": 7.0,
+          "action": "Lift the white mug and transport it towards the plate.",
+          "start_sec": 3.5,
+          "end_sec": 5.0
+        },
+        {
+          "action": "Align the mug over the plate and lower it.",
+          "start_sec": 5.0,
+          "end_sec": 6.5
+        },
+        {
+          "action": "Release the mug onto the plate and retract the arm upwards.",
+          "start_sec": 6.5,
+          "end_sec": 8.0
+        },
+        {
+          "action": "Move the arm towards the brown box on the right and align above it.",
+          "start_sec": 8.0,
+          "end_sec": 9.0
+        },
+        {
+          "action": "Descend and close the gripper to grasp the brown box.",
+          "start_sec": 9.0,
           "end_sec": 10.0
         }
       ]
@@ -497,24 +682,44 @@ export const videoRecords: VideoRecord[] = [
     "episodeId": "demo_49",
     "qwen": {
       "success": true,
-      "caption": "The robot arm approaches the black book on the table from the right, grasps it, and lifts it. The arm then moves the book to the left and lowers it into the back compartment of the brown caddy, releasing it inside.",
+      "caption": "A robotic arm approaches a black book on a wooden table, grasps it, lifts it, and moves it to the left to place it into the back compartment of a brown caddy.",
       "reason": null,
-      "latency": 14.138,
+      "latency": 24.302,
       "segments": [
         {
-          "action": "Move arm towards the book and grasp it",
+          "action": "Move the arm from the bottom right towards the black book on the table.",
           "start_sec": 0.0,
-          "end_sec": 4.0
+          "end_sec": 2.0
         },
         {
-          "action": "Lift the book and move it to the caddy",
-          "start_sec": 4.0,
-          "end_sec": 6.0
+          "action": "Align the gripper directly above the book and descend to make contact.",
+          "start_sec": 2.0,
+          "end_sec": 3.5
         },
         {
-          "action": "Lower the book into the back compartment and release",
-          "start_sec": 6.0,
-          "end_sec": 9.0
+          "action": "Close the gripper to grasp the book.",
+          "start_sec": 3.5,
+          "end_sec": 4.5
+        },
+        {
+          "action": "Lift the book vertically off the table surface.",
+          "start_sec": 4.5,
+          "end_sec": 5.5
+        },
+        {
+          "action": "Transport the book to the left, positioning it over the back compartment of the caddy.",
+          "start_sec": 5.5,
+          "end_sec": 7.0
+        },
+        {
+          "action": "Lower the book into the compartment and open the gripper to release it.",
+          "start_sec": 7.0,
+          "end_sec": 8.5
+        },
+        {
+          "action": "Retract the arm upwards and away from the caddy.",
+          "start_sec": 8.5,
+          "end_sec": 9.5
         }
       ]
     },

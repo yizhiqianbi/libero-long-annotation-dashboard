@@ -1,10 +1,30 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:06.000
-Robot arm moves right and presses the stove knob to turn on the burner
+00:00:00.000 --> 00:00:02.000
+Move the robotic arm from the bottom center towards the stove knob on the right.
 
 2
-00:00:06.000 --> 00:00:13.500
-Robot arm moves left and grasps the moka pot
+00:00:02.000 --> 00:00:03.500
+Descend and close the gripper to grasp the stove knob.
+
+3
+00:00:03.500 --> 00:00:06.000
+Rotate the knob to the right to turn on the stove, causing the burner to glow red.
+
+4
+00:00:06.000 --> 00:00:08.000
+Open the gripper to release the knob and retract the arm to the left.
+
+5
+00:00:08.000 --> 00:00:10.000
+Move the arm to the moka pot and close the gripper to grasp its handle.
+
+6
+00:00:10.000 --> 00:00:12.000
+Lift the moka pot and transport it to the right, aligning it above the stove burner.
+
+7
+00:00:12.000 --> 00:00:13.500
+Lower the moka pot onto the burner and open the gripper to release it.
 

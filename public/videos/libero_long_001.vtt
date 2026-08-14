@@ -1,18 +1,26 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:04.000
-Move arm towards the clock and grasp it
+00:00:00.000 --> 00:00:02.000
+Move the robotic arm from the bottom center towards the black bowl on the table to the left.
 
 2
-00:00:04.000 --> 00:00:07.000
-Lift the clock and move it to the open drawer
+00:00:02.000 --> 00:00:04.000
+Descend and close the gripper to grasp the black bowl.
 
 3
-00:00:07.000 --> 00:00:10.000
-Place the clock inside the drawer and release it
+00:00:04.000 --> 00:00:07.000
+Lift the black bowl and transport it to the right towards the open cabinet.
 
 4
-00:00:10.000 --> 00:00:12.600
-Push the drawer closed
+00:00:07.000 --> 00:00:09.000
+Lower the black bowl into the open cabinet drawer.
+
+5
+00:00:09.000 --> 00:00:10.000
+Open the gripper to release the black bowl inside the drawer.
+
+6
+00:00:10.000 --> 00:00:12.500
+Retract the robotic arm upwards and away from the cabinet.
 

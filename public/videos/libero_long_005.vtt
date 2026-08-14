@@ -1,18 +1,34 @@
 WEBVTT
 
 1
-00:00:00.000 --> 00:00:05.000
-Move to the alphabet soup can, grasp it, and lift it off the table.
+00:00:00.000 --> 00:00:01.500
+Move the arm from the bottom center toward the blue box on the left side of the table.
 
 2
-00:00:05.000 --> 00:00:08.000
-Move the alphabet soup can to the basket and release it inside.
+00:00:01.500 --> 00:00:03.000
+Descend and close the gripper to grasp the blue box.
 
 3
-00:00:08.000 --> 00:00:11.000
-Move to the tomato sauce can, grasp it, and lift it off the table.
+00:00:03.000 --> 00:00:05.500
+Lift the blue box and transport it to the right toward the basket.
 
 4
-00:00:11.000 --> 00:00:14.000
-Move the tomato sauce can to the basket and release it inside.
+00:00:05.500 --> 00:00:07.500
+Lower the blue box into the basket and open the gripper to release it.
+
+5
+00:00:07.500 --> 00:00:09.000
+Retract the arm and move left to approach the green box.
+
+6
+00:00:09.000 --> 00:00:10.500
+Descend and close the gripper to grasp the green box.
+
+7
+00:00:10.500 --> 00:00:12.500
+Lift the green box and transport it to the right toward the basket.
+
+8
+00:00:12.500 --> 00:00:14.000
+Lower the green box into the basket and open the gripper to release it.
 
