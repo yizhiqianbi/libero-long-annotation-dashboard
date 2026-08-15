@@ -89,7 +89,7 @@ function formatPreciseTime(seconds: number) {
 }
 
 export default function Home() {
-  const [tab, setTab] = useState<(typeof tabs)[number][0]>("overview");
+  const [tab, setTab] = useState<(typeof tabs)[number][0]>("actions");
   const [selectedModel, setSelectedModel] = useState<ModelKey>("qwen");
   const [sampleIndex, setSampleIndex] = useState(0);
   const [videoIndex, setVideoIndex] = useState(0);
