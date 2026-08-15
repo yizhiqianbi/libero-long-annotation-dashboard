@@ -129,6 +129,13 @@ short-window captions must not be promoted to independent subtasks.
 See [`docs/semantic_grounding_design_zh.md`](docs/semantic_grounding_design_zh.md)
 for the two-stage semantic-planning and temporal-grounding design.
 
+The current 20 FPS binary grounding scan contains 74 ordered subtasks across
+10 success-only LIBERO-Long videos. It localized 33 subtasks (44.6%) into 36
+refined spans from 786 evidence windows; the remaining candidates are shown as
+`unlocalized` so reviewers can correct them instead of treating missing
+evidence as a fabricated timestamp. The evidence pass averaged 0.446 s per
+window and took 350.5 s on one H200.
+
 ## Learn More
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)

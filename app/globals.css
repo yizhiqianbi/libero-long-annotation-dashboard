@@ -84,6 +84,7 @@ footer { display: flex; justify-content: space-between; padding: 46px 0 30px; ma
 .grounding-track { position: relative; height: 18px; overflow: hidden; background: #29302d; }
 .grounding-span { position: absolute; z-index: 1; top: 3px; height: 12px; background: #7fc9a4; opacity: .53; pointer-events: none; }
 .grounding-span.active { z-index: 3; background: #d6e37c; opacity: 1; }
+.grounding-span.candidate { z-index: 0; background: transparent; border: 1px dashed #a1aa90; opacity: .65; }
 .grounding-active { margin-top: 14px; padding: 16px; background: #263126; border: 1px solid #536b55; }
 .grounding-active > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
 .grounding-active strong { color: #edf1e6; font: 18px Georgia, serif; }
@@ -92,5 +93,7 @@ footer { display: flex; justify-content: space-between; padding: 46px 0 30px; ma
 .grounding-subtasks { max-height: 360px; overflow: auto; margin-top: 14px; border-top: 1px solid var(--line); }
 .grounding-row { display: grid; grid-template-columns: 32px 105px 1fr; gap: 10px; align-items: start; padding: 11px 10px; border-bottom: 1px solid #252d29; color: #b8c2b7; font-size: 12px; line-height: 1.45; }
 .grounding-row.active { color: #edf0e4; background: #273022; box-shadow: inset 2px 0 #d6e37c; }
+.grounding-row.candidate { color: #a8afa4; border-left: 2px dashed #8a927b; }
 .grounding-index { color: #778578; font: 10px ui-monospace, monospace; }
+.grounding-status { color: #e5b88f; font: 9px ui-monospace, monospace; white-space: nowrap; }
 @media (max-width: 850px) { .grounding-layout { grid-template-columns: 1fr; }.grounding-list { max-height: 310px; }.grounding-row { grid-template-columns: 25px 78px 1fr; gap: 6px; font-size: 10px; } }
