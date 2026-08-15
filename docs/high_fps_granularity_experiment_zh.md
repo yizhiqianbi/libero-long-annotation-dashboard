@@ -35,3 +35,20 @@ dashboard 仍保留经过验证的 2 FPS dense 字幕，不把未经验证的高
 然后在候选时间段内以 0.25–0.5 秒滑窗调用 grounding 模型，聚合相邻命中窗口，
 最后量化到源视频 20 FPS 的 0.05 秒网格。这个方案会显著增加调用次数，需要
 单独评估空命中率、边界误差和吞吐。
+
+## 可复现的短窗扫描
+
+若目标是实际得到小于 0.5 秒的字幕边界，应使用本地滑窗，而不是只给整段视频提高 FPS：
+
+```bash
+python /public/libero_long_annotation_eval/run_local_window_caption.py \
+  --name timelens2 \
+  --model /public/interns/hubin/world_models/models/TimeLens2-8B \
+  --fps 20 --window-sec 0.50 --stride-sec 0.25 \
+  --manifest /public/libero_long_annotation_eval/data/libero10_success_manifest.jsonl \
+  --output /public/libero_long_annotation_eval/results/libero10_timelens2_local_windows.jsonl
+```
+
+输出保留重叠窗口和 20 FPS 网格（0.05 秒），便于人工审核或后续合并；
+`--window-sec 0.25 --stride-sec 0.125` 会更细，但调用数约翻倍。该模式尚未在共享 GPU
+空闲前批量运行，因此不把它计入上面的模型比较。
