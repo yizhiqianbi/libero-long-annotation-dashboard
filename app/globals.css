@@ -100,5 +100,6 @@ footer { display: flex; justify-content: space-between; padding: 46px 0 30px; ma
 .video-compare-panel { min-width: 0; padding: 10px; background: #111815; border: 1px solid var(--line); }
 .video-compare-label { margin-bottom: 8px; color: #9aa79a; font: 9px ui-monospace, monospace; letter-spacing: .12em; }
 .video-compare-panel .video-player { max-height: 360px; aspect-ratio: 1 / 1; }
+.video-orientation-note { margin: -10px 0 13px; padding: 10px 12px; color: #b5c0b2; background: #1d2820; border-left: 2px solid #7fc9a4; font-size: 11px; line-height: 1.5; }
 @media (max-width: 850px) { .grounding-layout { grid-template-columns: 1fr; }.grounding-list { max-height: 310px; }.grounding-row { grid-template-columns: 25px 78px 1fr; gap: 6px; font-size: 10px; } }
 @media (max-width: 850px) { .video-compare { grid-template-columns: 1fr; } }

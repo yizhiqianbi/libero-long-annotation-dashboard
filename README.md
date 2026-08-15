@@ -137,6 +137,14 @@ refined spans from 786 evidence windows; the remaining candidates are shown as
 evidence as a fabricated timestamp. The evidence pass averaged 0.446 s per
 window and took 350.5 s on one H200.
 
+The visible MP4 exports apply LIBERO's camera-orientation correction: raw
+HDF5 `agentview_rgb` frames use the OpenGL bottom-left origin, so the display
+video flips the vertical axis once. The raw OpenGL copies are kept outside the
+dashboard for provenance. See
+[`docs/video_orientation_zh.md`](docs/video_orientation_zh.md). Existing model
+JSON results were produced before this export correction and should be rerun
+on the corrected videos before treating visual wording as final.
+
 ## Learn More
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
