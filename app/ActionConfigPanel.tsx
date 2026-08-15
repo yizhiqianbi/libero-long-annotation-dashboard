@@ -81,7 +81,7 @@ export default function ActionConfigPanel() {
       <div className="action-config-note">
         这是本次 Qwen3.8-27B-FP8 的真实 action_config 输出。每条记录把全局任务拆成
         pick、place、rotate、close 等可执行动作；帧号使用原始视频 20 FPS 坐标，
-        不把 approach 或小修正误当成独立 caption。
+        不把 approach 或小修正误当成独立 caption。TimeLens2 和 TimeLens 的时间定位结果仍可在“视频 + 三模型”页逐条对照。
       </div>
       <div className="action-config-layout">
         <div className="video-list action-config-list" aria-label="action_config 视频列表">

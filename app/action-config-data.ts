@@ -22,7 +22,7 @@ export type ActionConfigRecord = {
   actions: ActionConfigAction[];
 };
 
-export const actionConfigRecords: Record<string, ActionConfigRecord> = +{
+export const actionConfigRecords: Record<string, ActionConfigRecord> = {
   "libero_long_000": {
     "id": "libero_long_000",
     "taskId": 0,
