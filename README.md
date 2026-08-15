@@ -115,6 +115,10 @@ pipeline.
 Prompt definitions and the per-subgoal refinement design are documented in
 [`docs/prompt_design_zh.md`](docs/prompt_design_zh.md).
 
+The high-FPS tradeoff and the reason the production dashboard remains on the
+validated dense pass are recorded in
+[`docs/high_fps_granularity_experiment_zh.md`](docs/high_fps_granularity_experiment_zh.md).
+
 ## Learn More
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
