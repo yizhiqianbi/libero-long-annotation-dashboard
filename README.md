@@ -122,6 +122,11 @@ The high-FPS tradeoff and the reason the production dashboard remains on the
 validated dense pass are recorded in
 [`docs/high_fps_granularity_experiment_zh.md`](docs/high_fps_granularity_experiment_zh.md).
 
+The **语义 Grounding** tab is the primary embodied-task view: Qwen dense
+subtasks retain the global task meaning and their temporal spans are shown as
+the grounded units. The **高 FPS 滑窗** tab is supporting evidence only; its
+short-window captions must not be promoted to independent subtasks.
+
 ## Learn More
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
