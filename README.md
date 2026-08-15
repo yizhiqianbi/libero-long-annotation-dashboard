@@ -1,8 +1,9 @@
-# vinext-starter
+# LIBERO-Long Annotation Dashboard
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Interactive, success-only LIBERO-Long (`libero_10`) review dashboard. It
+compares Qwen3.8-27B-FP8 semantic/dense annotations with TimeLens2 and
+TimeLens temporal grounding, shows dense micro-subgoals with playback
+progress, and provides burned-in subtitle video downloads.
 
 ## Prerequisites
 
@@ -18,14 +19,18 @@ npm run build
 
 This starter does not use `wrangler.jsonc`.
 
-## Included Shape
+## Project Layout
 
-- edit site code under `app/`
+- `app/page.tsx`: dashboard UI and comparison views
+- `app/video-data.ts`: 10 LIBERO-Long success records and model outputs
+- `app/caption-compare-data.ts`: unified caption prompt comparison
+- `public/videos/`: source videos, WebVTT captions, and burned-in MP4 exports
+- `docs/`: efficiency evaluation and export notes
 - `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+
+The raw model checkpoints and LIBERO HDF5 files are intentionally not stored
+in this repository. The static dashboard data is derived from the reproducible
+evaluation outputs described in `docs/`.
 
 ## Workspace Auth Headers
 
@@ -87,12 +92,25 @@ or enforce explicit server-side membership or allowlist checks.
 Use SIWC for account pages, user-specific dashboards, saved records, and write
 actions tied to the current ChatGPT user. Leave public content anonymous.
 
-## Useful Commands
+## Development Commands
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
+
+Run the dashboard locally with `npm run dev`, then open the printed local URL.
+Use the **视频 + 三模型** tab to select a record, inspect the active subtitle,
+compare all three outputs, or download the corresponding `_captioned.mp4`.
+
+## Evaluation Notes
+
+The 10 records are successful human teleoperation demonstrations, so “10/10”
+is success-label alignment rather than a full accuracy score. TimeLens outputs
+query-conditioned temporal evidence and does not replace task success/failure
+annotation. See [`docs/model_efficiency_evaluation_zh.md`](docs/model_efficiency_evaluation_zh.md)
+for latency, throughput, GPU memory, and the recommended Qwen → TimeLens2
+pipeline.
 
 ## Learn More
 
