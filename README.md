@@ -112,6 +112,9 @@ annotation. See [`docs/model_efficiency_evaluation_zh.md`](docs/model_efficiency
 for latency, throughput, GPU memory, and the recommended Qwen → TimeLens2
 pipeline.
 
+Prompt definitions and the per-subgoal refinement design are documented in
+[`docs/prompt_design_zh.md`](docs/prompt_design_zh.md).
+
 ## Learn More
 
 - [vinext Documentation](https://github.com/cloudflare/vinext)
