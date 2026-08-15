@@ -101,7 +101,8 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 Run the dashboard locally with `npm run dev`, then open the printed local URL.
 Use the **视频 + 三模型** tab to select a record, inspect the active subtitle,
-compare all three outputs, or download the corresponding `_captioned.mp4`.
+compare all three outputs, view the original and captioned videos side by side,
+or download either the source MP4 or corresponding `_captioned.mp4`.
 The **高 FPS 滑窗** tab replays the completed TimeLens2 20 FPS experiment with
 532 overlapping windows, a 0.25-second step, and the active window caption tied
 to the video timeline.
