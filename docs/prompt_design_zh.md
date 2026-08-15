@@ -1,6 +1,6 @@
 # Prompt 设计与 Qwen → TimeLens2 组合方式
 
-## 1. 当前实际运行的 Qwen dense prompt
+## 1. 历史 Qwen dense prompt（当前请使用 action_config）
 
 代码位置：`/public/libero_long_annotation_eval/run_qwen38.py`。
 
@@ -24,6 +24,9 @@ Keep segments chronological, non-overlapping, and within the video duration. Inc
 pauses and corrective motions as their own subgoals. Describe only visible actions
 and do not infer completion from the intended task. Use precise timestamps.
 ```
+
+这段是历史版本，保留用于复现实验；当前面向具身任务的动作级输出见
+docs/action_config_prompt_zh.md。当前代码中的 dense 模式也已切换为 action_config。
 
 设计意图是让 Qwen 同时完成四件事：理解整条任务、判断可见的成功/失败、描述
 动作语义、生成候选时间段。`{task}` 用于比较“观察到的动作”与“目标任务”，但
