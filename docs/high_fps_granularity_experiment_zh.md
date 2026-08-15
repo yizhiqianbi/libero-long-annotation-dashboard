@@ -50,5 +50,13 @@ python /public/libero_long_annotation_eval/run_local_window_caption.py \
 ```
 
 输出保留重叠窗口和 20 FPS 网格（0.05 秒），便于人工审核或后续合并；
-`--window-sec 0.25 --stride-sec 0.125` 会更细，但调用数约翻倍。该模式尚未在共享 GPU
-空闲前批量运行，因此不把它计入上面的模型比较。
+`--window-sec 0.25 --stride-sec 0.125` 会更细，但调用数约翻倍。实际运行时共享 GPU
+仍有其它任务，因此这组结果作为独立的高分辨率候选，不混入上面的模型比较。
+
+### 实际运行结果
+
+2026-08-15 已用单卡 H200 跑完 10 条视频：532 个窗口、总模型调用约 723.0 秒，
+平均每窗口 1.359 秒。输出文件为
+`/public/libero_long_annotation_eval/results/libero10_timelens2_local_windows.jsonl`；
+详细统计见本地 `reports/local_window_timelens2_20fps_zh.md`。这些是重叠窗口候选，
+尚未自动替换页面中的最终字幕。
