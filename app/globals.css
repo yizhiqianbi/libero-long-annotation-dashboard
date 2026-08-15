@@ -103,3 +103,32 @@ footer { display: flex; justify-content: space-between; padding: 46px 0 30px; ma
 .video-orientation-note { margin: -10px 0 13px; padding: 10px 12px; color: #b5c0b2; background: #1d2820; border-left: 2px solid #7fc9a4; font-size: 11px; line-height: 1.5; }
 @media (max-width: 850px) { .grounding-layout { grid-template-columns: 1fr; }.grounding-list { max-height: 310px; }.grounding-row { grid-template-columns: 25px 78px 1fr; gap: 6px; font-size: 10px; } }
 @media (max-width: 850px) { .video-compare { grid-template-columns: 1fr; } }
+
+.action-config-note { margin-bottom: 14px; padding: 14px 16px; color: #cbd4c8; background: #1e2720; border-left: 2px solid var(--lime); font-size: 12px; line-height: 1.6; }
+.action-config-layout { display: grid; grid-template-columns: minmax(260px, .72fr) minmax(0, 1.6fr); gap: 14px; align-items: start; }
+.action-config-list { max-height: 760px; }
+.action-config-stage { min-width: 0; }
+.action-config-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 14px; padding: 13px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); color: #758076; font: 10px ui-monospace, monospace; }
+.action-config-meta strong { margin-left: 5px; color: #d4dacd; font-weight: 400; }
+.action-config-summary { margin-top: 14px; padding: 14px 15px; background: #111815; border: 1px solid var(--line); }
+.action-config-summary p { margin: 8px 0 0; color: #d5dccf; font-size: 14px; line-height: 1.55; }
+.action-config-progress-meta { display: flex; justify-content: space-between; gap: 12px; margin: 15px 0 7px; color: #778277; font: 10px ui-monospace, monospace; }
+.action-config-track { position: relative; height: 16px; overflow: hidden; background: #29302d; }
+.action-config-fill { position: absolute; z-index: 3; display: block; height: 100%; background: var(--lime); opacity: .75; pointer-events: none; }
+.action-config-marker { position: absolute; z-index: 1; top: 3px; height: 10px; background: #60715d; opacity: .65; pointer-events: none; }
+.action-config-marker.active { z-index: 2; background: #f2d578; opacity: 1; }
+.action-config-now { margin-top: 12px; padding: 15px; background: #111815; border: 1px solid var(--line); }
+.action-config-now > div:first-child { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.action-config-now strong { color: #e8eee1; font: 17px Georgia, serif; }
+.action-config-skill { display: inline-block; margin-top: 11px; padding: 4px 7px; color: #10140f; background: var(--lime); font: 10px ui-monospace, monospace; }
+.action-config-now p { margin: 10px 0 0; color: #d0d8ce; font-size: 14px; line-height: 1.5; }
+.action-config-now small { display: block; margin-top: 8px; color: #91a293; font: 10px ui-monospace, monospace; }
+.action-config-rows { max-height: 350px; overflow: auto; margin-top: 14px; border-top: 1px solid var(--line); }
+.action-config-row { display: grid; grid-template-columns: 28px 88px 62px minmax(0, 1fr) 78px; gap: 9px; align-items: start; width: 100%; padding: 11px 10px; border: 0; border-bottom: 1px solid #252d29; background: transparent; color: #b8c2b7; text-align: left; font-size: 11px; line-height: 1.4; }
+.action-config-row:hover { background: #1b231e; }
+.action-config-row.active { color: #edf0e4; background: #273022; box-shadow: inset 2px 0 var(--lime); }
+.action-config-row-index, .action-config-row-time, .action-config-row-skill, .action-config-row-frames { color: var(--lime); font: 10px ui-monospace, monospace; white-space: nowrap; }
+.action-config-row-index { color: #778578; }
+.action-config-row-skill { color: #96b39a; }
+.action-config-row-frames { color: #748074; text-align: right; }
+@media (max-width: 850px) { .action-config-layout { grid-template-columns: 1fr; }.action-config-list { max-height: 310px; }.action-config-row { grid-template-columns: 23px 76px 52px 1fr; gap: 6px; font-size: 10px; }.action-config-row-frames { display: none; } }

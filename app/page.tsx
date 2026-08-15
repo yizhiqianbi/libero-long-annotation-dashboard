@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import ActionConfigPanel from "./ActionConfigPanel";
 import { videoRecords } from "./video-data";
 import { captionCompare } from "./caption-compare-data";
 
@@ -72,6 +73,7 @@ const tabs = [
   ["overview", "总览"],
   ["quality", "质量对比"],
   ["videos", "视频 + 三模型"],
+  ["actions", "动作级标注"],
   ["grounding", "语义 Grounding"],
   ["fine", "高 FPS 滑窗"],
   ["samples", "样本拆解"],
@@ -164,6 +166,8 @@ export default function Home() {
       <nav className="tabs" aria-label="评测视图">
         {tabs.map(([key, label]) => <button className={tab === key ? "tab active" : "tab"} key={key} onClick={() => setTab(key)}>{label}</button>)}
       </nav>
+
+      {tab === "actions" && <ActionConfigPanel />}
 
       {tab === "overview" && <>
         <section className="headline-grid">
