@@ -126,6 +126,8 @@ The **语义 Grounding** tab is the primary embodied-task view: Qwen dense
 subtasks retain the global task meaning and their temporal spans are shown as
 the grounded units. The **高 FPS 滑窗** tab is supporting evidence only; its
 short-window captions must not be promoted to independent subtasks.
+See [`docs/semantic_grounding_design_zh.md`](docs/semantic_grounding_design_zh.md)
+for the two-stage semantic-planning and temporal-grounding design.
 
 ## Learn More
 
